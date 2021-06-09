@@ -1,0 +1,74 @@
+CREATE (:Vendedor { idade: 32, nome: "Maria"})
+CREATE (:Vendedor { idade: 26}, nome: "Luiza")
+
+CREATE (:Companhia {nome: "Avon"})
+CREATE (:Companhia {nome: "Natura"})
+CREATE (:Companhia {nome: "Boticario"})
+
+//botica
+CREATE (:Produto {tipo: "Perfume", valor: 25, nome: "Kaiak"})
+CREATE (:Produto {tipo: "Perfume", valor: 23, nome: "Hoje"})
+
+//avon
+CREATE (:Produto {tipo: "Desodorante", valor: 15, nome: "Infinity"})
+CREATE (:Produto {tipo: "Loção", valor: 54, nome: "Care"})
+CREATE (:Produto {tipo: "Creme corporal", valor: 123, nome: "Todo dia"})
+
+//natura
+CREATE (:Produto {tipo: "Perfume", valor: 23, nome: "Essencial"})
+CREATE (:Produto {tipo: "Perfume", valor: 23, nome: "Urbe"})
+
+
+MATCH
+  (v:Vendedor),
+  (c:Companhia)
+WHERE v.nome = 'Maria' AND c.nome = "Avon"
+CREATE (v)-[r:REVENDE]->(c)
+
+MATCH
+  (v:Vendedor),
+  (c:Companhia)
+WHERE v.nome = 'Maria' AND c.nome = "Natura"
+CREATE (v)-[r:REVENDE]->(c)
+
+MATCH
+  (v:Vendedor),
+  (c1:Companhia),
+  (c2:Companhia)
+WHERE v.nome = 'Luiza' AND c1.nome = 'Avon' AND c2.nome = 'Boticario'
+CREATE (v)-[r1:REVENDE]->(c1)
+CREATE (v)-[r2:REVENDE]->(c2)
+
+//-----------------------
+
+MATCH
+  (c:Companhia),
+  (p1:Produto),
+  (p2:Produto)
+WHERE  c.nome = 'Boticario' AND p1.nome = 'Kaiak' AND p2.nome = 'Hoje' 
+CREATE (c)-[r1:VENDE]->(p1)
+CREATE (c)-[r2:VENDE]->(p2)
+
+MATCH
+  (c:Companhia),
+  (p1:Produto), 
+  (p2:Produto),
+  (p3:Produto)
+WHERE c.nome = 'Avon' AND p1.nome = 'Infinity' AND p2.nome = 'Care' AND p3.nome = 'Todo dia' 
+CREATE (c)-[r:VENDE]->(p1)
+CREATE (c)-[r2:VENDE]->(p2)
+CREATE (c)-[r3:VENDE]->(p3)
+
+MATCH
+  (c:Companhia),
+  (p1:Produto),
+  (p2:Produto)
+WHERE c.nome = 'Natura' AND p1.nome = 'Essencial' AND p2.nome = 'Urbe'
+CREATE (c)-[r1:VENDE]->(p1)
+CREATE (c)-[r2:VENDE]->(p2)
+
+
+
+
+
+

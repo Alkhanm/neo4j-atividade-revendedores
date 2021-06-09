@@ -1,0 +1,150 @@
+﻿[
+  {
+    "n": {
+"identity": 0,
+"labels": [
+        "Vendedor"
+      ],
+"properties": {
+"idade": 32,
+"nome": "Maria"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 1,
+"labels": [
+        "Vendedor"
+      ],
+"properties": {
+"idade": 26,
+"nome": "Luiza"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 2,
+"labels": [
+        "Companhia"
+      ],
+"properties": {
+"nome": "Avon"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 3,
+"labels": [
+        "Companhia"
+      ],
+"properties": {
+"nome": "Natura"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 4,
+"labels": [
+        "Companhia"
+      ],
+"properties": {
+"nome": "Boticario"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 5,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 25,
+"tipo": "Perfume",
+"nome": "Kaiak"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 6,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 23,
+"tipo": "Perfume",
+"nome": "Hoje"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 7,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 15,
+"tipo": "Desodorante",
+"nome": "Infinity"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 8,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 54,
+"tipo": "Loção",
+"nome": "Care"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 9,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 123,
+"tipo": "Creme corporal",
+"nome": "Todo dia"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 10,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 23,
+"tipo": "Perfume",
+"nome": "Essencial"
+      }
+    }
+  },
+  {
+    "n": {
+"identity": 11,
+"labels": [
+        "Produto"
+      ],
+"properties": {
+"valor": 23,
+"tipo": "Perfume",
+"nome": "Urbe"
+      }
+    }
+  }
+]
